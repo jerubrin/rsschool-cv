@@ -1,1 +1,2 @@
 # rsschool-cv
+just init
