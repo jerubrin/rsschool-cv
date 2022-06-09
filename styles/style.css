@@ -19,7 +19,7 @@
     float: left;
 }
 .bottom-block {
-    align-items: end;
+    align-items: flex-end;;
     display: flex;
     height: 86px;
 }
