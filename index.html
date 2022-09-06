@@ -4,7 +4,6 @@
         <title>Alexey Kuptsov CV</title>
         <meta charset="utf-8">
         <link rel="stylesheet" href="styles/style.css">
-        
         <link href="http://fonts.cdnfonts.com/css/magra" rel="stylesheet">
     </head>
     <body>
@@ -35,7 +34,6 @@
                         <li class="nav-li"><a href="#tasks">Finished Tasks</a></li>
                         <li class="nav-li"><a href="#code">Code Examples</a></li>
                         <li class="nav-li"><a href="#contacts">Contacts</a></li>
-                        
                     </ul>
                 </nav>
             </header>
@@ -55,7 +53,6 @@
                     <h2 id="courses">Courses</h2>
                     <h3>RS.School</h3>
                     <p class="description-p">Android Application Development (2021)</p>
-
                     <h3>RS.School</h3>
                     <p class="description-p">JavaScript/Front-end. Stage 0 (2022)</p>
                 </div>
@@ -64,7 +61,6 @@
                     <h2 id="languages">Languages</h2>
                     <h3>Russian</h3>
                     <p class="description-p">Native</p>
-
                     <h3>English</h3>
                     <p class="description-p">Intermediate</p>
                 </div>
@@ -124,12 +120,9 @@
                     <p class="description-p">Base Use Case (I use it on domain level):</p>
                     <pre class="code-pre">
 abstract class BaseUseCase&lt;Type, Params&gt; {
-
     open suspend fun start(params: Params?): Type? =
         null
-    
     abstract suspend fun run(params: Params): Type
-    
     fun execute(params: Params): Flow&lt;Type&gt; = flow {
         start(params).also {
             if(it != null) emit(it)
@@ -141,17 +134,13 @@ abstract class BaseUseCase&lt;Type, Params&gt; {
                     <p class="description-p">State Class - sealed class sending with data frome one calss to other:</p>
                     <pre class="code-pre">
 sealed class UiState {
-    
     data class Error(
         val errorMessage: String
     ) : UiState()
-    
     class Loading : UiState()
-    
     data class Ready&lt;out T&gt;(
         val data: T
     ) : UiState()
-    
     class Idle : UiState()
 }</pre>
                 </div>
